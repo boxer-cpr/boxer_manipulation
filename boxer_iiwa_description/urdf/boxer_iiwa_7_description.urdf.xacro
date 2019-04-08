@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find iiwa_description)/urdf/materials.xacro" />
+  <xacro:include filename="$(find iiwa_description)/urdf/iiwa7.xacro"/>
+
+  <xacro:arg name="hardware_interface" default="PositionJointInterface"/>
+  <xacro:arg name="robot_name" default="iiwa"/>
+  <xacro:arg name="origin_xyz" default="0 0 0"/>
+  <xacro:arg name="origin_rpy" default="0 0 0"/>
+
+  <link name="iiwa_mount_link" />
+
+  <joint name="iiwa_mount_joint" type="fixed">
+    <parent link="top_mount" />
+    <child link="iiwa_mount_link" />
+    <origin xyz="$(optenv BOXER_IIWA_XYZ 0.24 0.0 0.0)" rpy="$(optenv BOXER_IIWA_RPY 0 0 0)"/>
+  </joint>
+
+  <xacro:iiwa7 hardware_interface="$(arg hardware_interface)" robot_name="$(arg robot_name)" parent="iiwa_mount_link">
+    <origin xyz="$(arg origin_xyz)" rpy="$(arg origin_rpy)" />
+  </xacro:iiwa7>
+</robot>

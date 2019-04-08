@@ -1,0 +1,1 @@
+export BOXER_URDF_EXTRAS=$(catkin_find boxer_ur_description urdf/boxer_ur5_description.urdf.xacro --first-only)

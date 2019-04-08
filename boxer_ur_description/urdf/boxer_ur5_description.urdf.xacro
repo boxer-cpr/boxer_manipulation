@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <joint name="arm_mount_joint" type="fixed">
+    <parent link="top_mount" />
+    <child link="ur_arm_base_link" />
+    <origin xyz="$(optenv BOXER_UR_XYZ 0.24 0.0 0.0)" rpy="$(optenv BOXER_UR_RPY 0 0 0)"/>
+  </joint>
+
+  <xacro:include filename="$(find ur_description)/urdf/ur5.urdf.xacro" />
+
+  <xacro:ur5_robot prefix="ur_arm_" joint_limited="true"/>
+</robot>
