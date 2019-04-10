@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="boxer_upper_platform_support" params="name scale *position">
+		<link name="${name}_support_link">
+			<visual>
+				<origin xyz="0 0 0" rpy="0 0 0" />
+				<geometry>
+					<mesh filename="package://boxer_manipulation_description/meshes/upper_supports.stl" scale="1 1 ${scale}"/>
+				</geometry>
+        <material name="Boxer_Grey"/>
+			</visual>
+			<collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+				<geometry>
+					<mesh filename="package://boxer_manipulation_description/meshes/upper_supports.stl" scale="1 1 ${scale}"/>
+				</geometry>
+			</collision>
+		</link>
+
+    <joint name="${name}_support_joint" type="fixed">
+      <xacro:insert_block name="position"/>
+      <parent link="top_mount" />
+      <child link="${name}_support_link" />
+    </joint>
+  </xacro:macro>
+
+  <xacro:macro name="boxer_full_upper_platform" params="name scale *position">
+    <link name="${name}_upper_mount">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://boxer_description/meshes/top_plate.stl" />
+        </geometry>
+        <material name="Boxer_DarkGrey"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://boxer_description/meshes/top_plate_collision.stl" />
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_upper_joint" type="fixed">
+      <xacro:insert_block name="position"/>
+      <parent link="top_mount" />
+      <child link="${name}_upper_mount" />
+    </joint>
+  </xacro:macro>
+
+  <xacro:macro name="boxer_small_upper_platform" params="name scale *position">
+    <link name="${name}_upper_mount">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://boxer_manipulation_description/meshes/small_upper_plate.stl" />
+        </geometry>
+        <material name="Boxer_DarkGrey"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://boxer_manipulation_description/meshes/small_upper_plate.stl" />
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_upper_joint" type="fixed">
+      <xacro:insert_block name="position"/>
+      <parent link="top_mount" />
+      <child link="${name}_upper_mount" />
+    </joint>
+  </xacro:macro>
+
+  <xacro:if value="$(optenv BOXER_SMALL_FRONT_MOUNT false)">
+    <xacro:boxer_small_upper_platform name="small_front" scale="$(env BOXER_UPPER_MOUNT_HEIGHT)">
+      <origin xyz="0.12925 0 $(env BOXER_UPPER_MOUNT_HEIGHT)" rpy="0 0 0" />
+    </xacro:boxer_small_upper_platform>
+
+    <xacro:boxer_upper_platform_support name="front_front" scale="$(env BOXER_UPPER_MOUNT_HEIGHT)">
+      <origin xyz="0.295926 0 0" rpy="0 0 0" />
+    </xacro:boxer_upper_platform_support>
+    <xacro:boxer_upper_platform_support name="front_rear" scale="$(env BOXER_UPPER_MOUNT_HEIGHT)">
+      <origin xyz="-0.037426 0 0" rpy="0 0 3.14159" />
+    </xacro:boxer_upper_platform_support>
+  </xacro:if>
+
+  <xacro:if value="$(optenv BOXER_SMALL_REAR_MOUNT false)">
+    <xacro:boxer_small_upper_platform name="small_rear" scale="$(env BOXER_UPPER_MOUNT_HEIGHT)">
+      <origin xyz="-0.12925 0 $(env BOXER_UPPER_MOUNT_HEIGHT)" rpy="0 0 0" />
+    </xacro:boxer_small_upper_platform>
+
+    <xacro:boxer_upper_platform_support name="rear_rear" scale="$(env BOXER_UPPER_MOUNT_HEIGHT)">
+      <origin xyz="-0.295926 0 0" rpy="0 0 3.14159" />
+    </xacro:boxer_upper_platform_support>
+    <xacro:boxer_upper_platform_support name="rear_front" scale="$(env BOXER_UPPER_MOUNT_HEIGHT)">
+      <origin xyz="0.037426 0 0" rpy="0 0 0" />
+    </xacro:boxer_upper_platform_support>
+  </xacro:if>
+
+<xacro:if value="$(optenv BOXER_FULL_MOUNT false)">
+  <xacro:boxer_full_upper_platform name="full" scale="$(env BOXER_UPPER_MOUNT_HEIGHT)">
+    <origin xyz="0 0 $(env BOXER_UPPER_MOUNT_HEIGHT)" rpy="0 0 0" />
+  </xacro:boxer_full_upper_platform>
+
+  <xacro:boxer_upper_platform_support name="front" scale="$(env BOXER_UPPER_MOUNT_HEIGHT)">
+    <origin xyz="0.295926 0 0" rpy="0 0 0" />
+  </xacro:boxer_upper_platform_support>
+  <xacro:boxer_upper_platform_support name="rear" scale="$(env BOXER_UPPER_MOUNT_HEIGHT)">
+    <origin xyz="-0.295926 0 0" rpy="0 0 3.14159" />
+  </xacro:boxer_upper_platform_support>
+</xacro:if>
+
+</robot>
