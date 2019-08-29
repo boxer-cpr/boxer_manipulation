@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find boxer_manipulation_description)/urdf/boxer_upper_mount.urdf.xacro" />
+
   <xacro:include filename="$(find iiwa_description)/urdf/materials.xacro" />
   <xacro:include filename="$(find iiwa_description)/urdf/iiwa7.xacro"/>
 
@@ -11,9 +13,9 @@
   <link name="iiwa_mount_link" />
 
   <joint name="iiwa_mount_joint" type="fixed">
-    <parent link="top_mount" />
+    <parent link="full_upper_mount" />
     <child link="iiwa_mount_link" />
-    <origin xyz="$(optenv BOXER_IIWA_XYZ 0.24 0.0 0.0)" rpy="$(optenv BOXER_IIWA_RPY 0 0 0)"/>
+    <origin xyz="$(optenv BOXER_IIWA_XYZ -0.08 0.0 0.012)" rpy="$(optenv BOXER_IIWA_RPY 0 0 0)"/>
   </joint>
 
   <xacro:iiwa7 hardware_interface="$(arg hardware_interface)" robot_name="$(arg robot_name)" parent="iiwa_mount_link">

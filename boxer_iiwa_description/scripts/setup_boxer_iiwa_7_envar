@@ -1,1 +1,4 @@
+export BOXER_UPPER_MOUNT_HEIGHT=0.3
+export BOXER_FULL_MOUNT=1
+
 export BOXER_URDF_EXTRAS=$(catkin_find boxer_iiwa_description urdf/boxer_iiwa_7_description.urdf.xacro --first-only)
