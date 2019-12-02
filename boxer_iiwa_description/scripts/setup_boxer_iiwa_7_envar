@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 export BOXER_UPPER_MOUNT_HEIGHT=0.3
 export BOXER_FULL_MOUNT=1
 

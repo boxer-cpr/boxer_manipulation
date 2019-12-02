@@ -1,1 +1,2 @@
+#!/usr/bin/env bash
 export BOXER_URDF_EXTRAS=$(catkin_find boxer_franka_description urdf/boxer_panda_hand_description.urdf.xacro --first-only)
