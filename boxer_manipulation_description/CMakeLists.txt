@@ -9,6 +9,7 @@ include_directories()
 install(DIRECTORY meshes urdf
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
-install(DIRECTORY scripts
+install(PROGRAMS
+  scripts/launch_delay.sh
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

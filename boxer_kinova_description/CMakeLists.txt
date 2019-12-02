@@ -9,6 +9,11 @@ include_directories()
 install(DIRECTORY urdf
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
-install(DIRECTORY scripts
+install(PROGRAMS
+  scripts/setup_boxer_j2n6s200_envar
+  scripts/setup_boxer_j2n6s300_envar
+  scripts/setup_boxer_j2n7s300_envar
+  scripts/setup_boxer_j2s6s300_envar
+  scripts/setup_boxer_j2s7s300_envar
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

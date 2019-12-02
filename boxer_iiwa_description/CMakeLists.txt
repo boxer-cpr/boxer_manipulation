@@ -9,6 +9,7 @@ include_directories()
 install(DIRECTORY urdf
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
-install(DIRECTORY scripts
+install(PROGRAMS
+  scripts/setup_boxer_iiwa_7_envar
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
