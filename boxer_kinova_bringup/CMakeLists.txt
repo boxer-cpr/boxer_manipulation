@@ -10,6 +10,8 @@ if (CATKIN_ENABLE_TESTING)
   roslaunch_add_file_check(launch/kinova_robot.launch)
   roslaunch_add_file_check(launch/boxer_dual_kinova_bringup.launch)
   roslaunch_add_file_check(launch/boxer_kinova_bringup.launch)
+  roslaunch_add_file_check(launch/boxer_dual_gen3_bringup.launch)
+  roslaunch_add_file_check(launch/boxer_gen3_bringup.launch)
 endif()
 
 install(DIRECTORY launch
