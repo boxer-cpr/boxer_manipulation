@@ -15,5 +15,8 @@ install(PROGRAMS
   scripts/setup_boxer_j2n7s300_envar
   scripts/setup_boxer_j2s6s300_envar
   scripts/setup_boxer_j2s7s300_envar
+  scripts/setup_boxer_gen3_envar
+  scripts/setup_boxer_gen3_robotiq_2f_85_envar
+  scripts/setup_boxer_gen3_robotiq_2f_140_envar
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
