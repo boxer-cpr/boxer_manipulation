@@ -20,7 +20,7 @@
 
     <joint name="${name}_support_joint" type="fixed">
       <xacro:insert_block name="position"/>
-      <parent link="top_mount" />
+      <parent link="mid_mount" />
       <child link="${name}_support_link" />
     </joint>
   </xacro:macro>
@@ -44,7 +44,7 @@
 
     <joint name="${name}_upper_joint" type="fixed">
       <xacro:insert_block name="position"/>
-      <parent link="top_mount" />
+      <parent link="mid_mount" />
       <child link="${name}_upper_mount" />
     </joint>
   </xacro:macro>
@@ -68,7 +68,7 @@
 
     <joint name="${name}_upper_joint" type="fixed">
       <xacro:insert_block name="position"/>
-      <parent link="top_mount" />
+      <parent link="mid_mount" />
       <child link="${name}_upper_mount" />
     </joint>
   </xacro:macro>

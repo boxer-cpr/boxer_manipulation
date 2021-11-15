@@ -32,7 +32,7 @@
     <disable_collisions link1="chassis_link" link2="rear_support_link" reason="Never" />
     <disable_collisions link1="chassis_link" link2="rotacastor_left_link" reason="Adjacent" />
     <disable_collisions link1="chassis_link" link2="rotacastor_right_link" reason="Adjacent" />
-    <disable_collisions link1="chassis_link" link2="top_mount" reason="Never" />
+    <disable_collisions link1="chassis_link" link2="mid_mount" reason="Never" />
     <disable_collisions link1="chassis_link" link2="wheel_left_link" reason="Adjacent" />
     <disable_collisions link1="chassis_link" link2="wheel_right_link" reason="Adjacent" />
     <disable_collisions link1="front_support_link" link2="full_upper_mount" reason="Default" />
@@ -45,7 +45,7 @@
     <disable_collisions link1="front_support_link" link2="rear_support_link" reason="Never" />
     <disable_collisions link1="front_support_link" link2="rotacastor_left_link" reason="Never" />
     <disable_collisions link1="front_support_link" link2="rotacastor_right_link" reason="Never" />
-    <disable_collisions link1="front_support_link" link2="top_mount" reason="Adjacent" />
+    <disable_collisions link1="front_support_link" link2="mid_mount" reason="Adjacent" />
     <disable_collisions link1="front_support_link" link2="wheel_left_link" reason="Never" />
     <disable_collisions link1="front_support_link" link2="wheel_right_link" reason="Never" />
     <disable_collisions link1="full_upper_mount" link2="iiwa_link_0" reason="Adjacent" />
@@ -57,7 +57,7 @@
     <disable_collisions link1="full_upper_mount" link2="rear_support_link" reason="Default" />
     <disable_collisions link1="full_upper_mount" link2="rotacastor_left_link" reason="Never" />
     <disable_collisions link1="full_upper_mount" link2="rotacastor_right_link" reason="Never" />
-    <disable_collisions link1="full_upper_mount" link2="top_mount" reason="Adjacent" />
+    <disable_collisions link1="full_upper_mount" link2="mid_mount" reason="Adjacent" />
     <disable_collisions link1="full_upper_mount" link2="wheel_left_link" reason="Never" />
     <disable_collisions link1="full_upper_mount" link2="wheel_right_link" reason="Never" />
     <disable_collisions link1="iiwa_link_0" link2="iiwa_link_1" reason="Adjacent" />
@@ -69,7 +69,7 @@
     <disable_collisions link1="iiwa_link_0" link2="rear_support_link" reason="Never" />
     <disable_collisions link1="iiwa_link_0" link2="rotacastor_left_link" reason="Never" />
     <disable_collisions link1="iiwa_link_0" link2="rotacastor_right_link" reason="Never" />
-    <disable_collisions link1="iiwa_link_0" link2="top_mount" reason="Never" />
+    <disable_collisions link1="iiwa_link_0" link2="mid_mount" reason="Never" />
     <disable_collisions link1="iiwa_link_0" link2="wheel_left_link" reason="Never" />
     <disable_collisions link1="iiwa_link_0" link2="wheel_right_link" reason="Never" />
     <disable_collisions link1="iiwa_link_1" link2="iiwa_link_2" reason="Adjacent" />
@@ -83,7 +83,7 @@
     <disable_collisions link1="iiwa_link_1" link2="rear_support_link" reason="Never" />
     <disable_collisions link1="iiwa_link_1" link2="rotacastor_left_link" reason="Never" />
     <disable_collisions link1="iiwa_link_1" link2="rotacastor_right_link" reason="Never" />
-    <disable_collisions link1="iiwa_link_1" link2="top_mount" reason="Never" />
+    <disable_collisions link1="iiwa_link_1" link2="mid_mount" reason="Never" />
     <disable_collisions link1="iiwa_link_1" link2="wheel_left_link" reason="Never" />
     <disable_collisions link1="iiwa_link_1" link2="wheel_right_link" reason="Never" />
     <disable_collisions link1="iiwa_link_2" link2="iiwa_link_3" reason="Adjacent" />
@@ -96,7 +96,7 @@
     <disable_collisions link1="iiwa_link_2" link2="rear_support_link" reason="Never" />
     <disable_collisions link1="iiwa_link_2" link2="rotacastor_left_link" reason="Never" />
     <disable_collisions link1="iiwa_link_2" link2="rotacastor_right_link" reason="Never" />
-    <disable_collisions link1="iiwa_link_2" link2="top_mount" reason="Never" />
+    <disable_collisions link1="iiwa_link_2" link2="mid_mount" reason="Never" />
     <disable_collisions link1="iiwa_link_2" link2="wheel_left_link" reason="Never" />
     <disable_collisions link1="iiwa_link_2" link2="wheel_right_link" reason="Never" />
     <disable_collisions link1="iiwa_link_3" link2="iiwa_link_4" reason="Adjacent" />
@@ -108,7 +108,7 @@
     <disable_collisions link1="iiwa_link_3" link2="rear_support_link" reason="Never" />
     <disable_collisions link1="iiwa_link_3" link2="rotacastor_left_link" reason="Never" />
     <disable_collisions link1="iiwa_link_3" link2="rotacastor_right_link" reason="Never" />
-    <disable_collisions link1="iiwa_link_3" link2="top_mount" reason="Never" />
+    <disable_collisions link1="iiwa_link_3" link2="mid_mount" reason="Never" />
     <disable_collisions link1="iiwa_link_3" link2="wheel_left_link" reason="Never" />
     <disable_collisions link1="iiwa_link_3" link2="wheel_right_link" reason="Never" />
     <disable_collisions link1="iiwa_link_4" link2="iiwa_link_5" reason="Adjacent" />
@@ -118,7 +118,7 @@
     <disable_collisions link1="iiwa_link_4" link2="lift_link" reason="Never" />
     <disable_collisions link1="iiwa_link_4" link2="rotacastor_left_link" reason="Never" />
     <disable_collisions link1="iiwa_link_4" link2="rotacastor_right_link" reason="Never" />
-    <disable_collisions link1="iiwa_link_4" link2="top_mount" reason="Never" />
+    <disable_collisions link1="iiwa_link_4" link2="mid_mount" reason="Never" />
     <disable_collisions link1="iiwa_link_4" link2="wheel_left_link" reason="Never" />
     <disable_collisions link1="iiwa_link_4" link2="wheel_right_link" reason="Never" />
     <disable_collisions link1="iiwa_link_5" link2="iiwa_link_6" reason="Adjacent" />
@@ -127,7 +127,7 @@
     <disable_collisions link1="iiwa_link_5" link2="lift_link" reason="Never" />
     <disable_collisions link1="iiwa_link_5" link2="rotacastor_left_link" reason="Never" />
     <disable_collisions link1="iiwa_link_5" link2="rotacastor_right_link" reason="Never" />
-    <disable_collisions link1="iiwa_link_5" link2="top_mount" reason="Never" />
+    <disable_collisions link1="iiwa_link_5" link2="mid_mount" reason="Never" />
     <disable_collisions link1="iiwa_link_5" link2="wheel_left_link" reason="Never" />
     <disable_collisions link1="iiwa_link_5" link2="wheel_right_link" reason="Never" />
     <disable_collisions link1="iiwa_link_6" link2="iiwa_link_7" reason="Adjacent" />
@@ -145,28 +145,28 @@
     <disable_collisions link1="internal_link" link2="rear_support_link" reason="Never" />
     <disable_collisions link1="internal_link" link2="rotacastor_left_link" reason="Never" />
     <disable_collisions link1="internal_link" link2="rotacastor_right_link" reason="Never" />
-    <disable_collisions link1="internal_link" link2="top_mount" reason="Never" />
+    <disable_collisions link1="internal_link" link2="mid_mount" reason="Never" />
     <disable_collisions link1="internal_link" link2="wheel_left_link" reason="Never" />
     <disable_collisions link1="internal_link" link2="wheel_right_link" reason="Never" />
     <disable_collisions link1="lift_link" link2="rear_support_link" reason="Never" />
     <disable_collisions link1="lift_link" link2="rotacastor_left_link" reason="Never" />
     <disable_collisions link1="lift_link" link2="rotacastor_right_link" reason="Never" />
-    <disable_collisions link1="lift_link" link2="top_mount" reason="Adjacent" />
+    <disable_collisions link1="lift_link" link2="mid_mount" reason="Adjacent" />
     <disable_collisions link1="lift_link" link2="wheel_left_link" reason="Never" />
     <disable_collisions link1="lift_link" link2="wheel_right_link" reason="Never" />
     <disable_collisions link1="rear_support_link" link2="rotacastor_left_link" reason="Never" />
     <disable_collisions link1="rear_support_link" link2="rotacastor_right_link" reason="Never" />
-    <disable_collisions link1="rear_support_link" link2="top_mount" reason="Adjacent" />
+    <disable_collisions link1="rear_support_link" link2="mid_mount" reason="Adjacent" />
     <disable_collisions link1="rear_support_link" link2="wheel_left_link" reason="Never" />
     <disable_collisions link1="rear_support_link" link2="wheel_right_link" reason="Never" />
     <disable_collisions link1="rotacastor_left_link" link2="rotacastor_right_link" reason="Never" />
-    <disable_collisions link1="rotacastor_left_link" link2="top_mount" reason="Never" />
+    <disable_collisions link1="rotacastor_left_link" link2="mid_mount" reason="Never" />
     <disable_collisions link1="rotacastor_left_link" link2="wheel_left_link" reason="Never" />
     <disable_collisions link1="rotacastor_left_link" link2="wheel_right_link" reason="Never" />
-    <disable_collisions link1="rotacastor_right_link" link2="top_mount" reason="Never" />
+    <disable_collisions link1="rotacastor_right_link" link2="mid_mount" reason="Never" />
     <disable_collisions link1="rotacastor_right_link" link2="wheel_left_link" reason="Never" />
     <disable_collisions link1="rotacastor_right_link" link2="wheel_right_link" reason="Never" />
-    <disable_collisions link1="top_mount" link2="wheel_left_link" reason="Never" />
-    <disable_collisions link1="top_mount" link2="wheel_right_link" reason="Never" />
+    <disable_collisions link1="mid_mount" link2="wheel_left_link" reason="Never" />
+    <disable_collisions link1="mid_mount" link2="wheel_right_link" reason="Never" />
     <disable_collisions link1="wheel_left_link" link2="wheel_right_link" reason="Never" />
 </robot>

@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <joint name="arm_mount_joint" type="fixed">
-    <parent link="top_mount" />
+    <parent link="mid_mount" />
     <child link="arm_mount_link" />
     <origin xyz="$(optenv BOXER_KINOVA_XYZ 0.21 0.0 0.0)" rpy="$(optenv BOXER_KINOVA_RPY 0 0 0)"/>
   </joint>

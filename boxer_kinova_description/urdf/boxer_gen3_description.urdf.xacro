@@ -13,7 +13,7 @@
   <xacro:load_robot arm="$(arg arm)" gripper="$(arg gripper)" dof="$(arg dof)" vision="$(arg vision)" sim="$(arg sim)" prefix="$(arg prefix)" />
 
   <joint name="arm_mount_joint" type="fixed">
-    <parent link="top_mount" />
+    <parent link="mid_mount" />
     <child link="kinova_arm_base_link" />
     <origin xyz="$(optenv BOXER_KINOVA_XYZ 0.21 0.0 0.0)" rpy="$(optenv BOXER_KINOVA_RPY 0 0 0)"/>
   </joint>
