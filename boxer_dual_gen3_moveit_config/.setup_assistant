@@ -6,6 +6,6 @@ moveit_setup_assistant_config:
   SRDF:
     relative_path: config/boxer.srdf
   CONFIG:
-    author_name: Dave Niewinski
-    author_email: dniewinski@clearpathrobotics.com
-    generated_timestamp: 1588104257
+    author_name: Chris Iverach-Brereton
+    author_email: civerachb@clearpathrobotics.com
+    generated_timestamp: 1637166502
