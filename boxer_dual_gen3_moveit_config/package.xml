@@ -1,6 +1,6 @@
 <package>
 
-  <name>boxer_gen3_moveit_config</name>
+  <name>boxer_dual_gen3_moveit_config</name>
   <version>0.3.0</version>
   <description>
      An automatically generated package with all the configuration and launch files for using the boxer with the MoveIt! Motion Planning Framework
@@ -31,6 +31,6 @@
   <!-- <run_depend>warehouse_ros_mongo</run_depend> -->
   <build_depend>boxer_description</build_depend>
   <run_depend>boxer_description</run_depend>
-
+  <run_depend>boxer_kinova_description</run_depend>
 
 </package>

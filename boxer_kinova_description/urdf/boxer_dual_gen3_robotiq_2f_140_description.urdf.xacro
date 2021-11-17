@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:arg name="arm" default="gen3" />
+  <xacro:arg name="dof" default="7" />
+  <xacro:arg name="vision" default="true" />
+
+  <xacro:arg name="gripper" default="robotiq_2f_140" />
+
+  <xacro:arg name="sim" default="false" />
+  <xacro:arg name="left_arm_prefix" default="left_arm_" />
+  <xacro:arg name="right_arm_prefix" default="right_arm_" />
+
+  <xacro:include filename="$(find boxer_manipulation_description)/urdf/boxer_dual_arm_tower.urdf.xacro" />
+  <xacro:boxer_dual_arm_tower prefix="tower" parent="mid_mount">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </xacro:boxer_dual_arm_tower>
+
+  <!-- Add the arms to the model -->
+  <xacro:include filename="$(find kortex_description)/robots/kortex_robot.xacro" />
+  <xacro:load_robot arm="$(arg arm)" gripper="$(arg gripper)" dof="$(arg dof)" vision="$(arg vision)" sim="$(arg sim)" prefix="$(arg left_arm_prefix)" />
+  <xacro:load_robot arm="$(arg arm)" gripper="$(arg gripper)" dof="$(arg dof)" vision="$(arg vision)" sim="$(arg sim)" prefix="$(arg right_arm_prefix)" />
+
+  <joint name="left_arm_mount_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="tower_left_arm_mount_link" />
+    <child link="$(arg left_arm_prefix)base_link" />
+  </joint>
+
+  <joint name="right_arm_mount_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="tower_right_arm_mount_link" />
+    <child link="$(arg right_arm_prefix)base_link" />
+  </joint>
+
+</robot>

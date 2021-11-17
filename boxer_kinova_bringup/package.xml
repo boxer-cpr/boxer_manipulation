@@ -4,7 +4,9 @@
   <version>0.0.0</version>
   <description>The boxer_kinova_bringup package</description>
 
-  <maintainer email="dniewinski@clearpathrobotics.com">Dave Niewinski</maintainer>
+  <maintainer email="civerachb@clearpathrobotics.com">Chris Iverach-Brereton</maintainer>
+  <author email="civerachb@clearpathrobotics.com">Chris Iverach-Brereton</author>
+  <author email="dniewinski@clearpathrobotics.com">Dave Niewinski</author>
 
   <license>BSD</license>
 

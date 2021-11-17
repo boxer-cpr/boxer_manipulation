@@ -4,12 +4,15 @@
   <version>0.0.0</version>
   <description>The boxer_kinova_description package</description>
 
-  <maintainer email="dniewinski@clearpathrobotics.com">Dave Niewinski</maintainer>
+  <maintainer email="civerachb@clearpathrobotics.com">Chris Iverach-Brereton</maintainer>
+  <author email="civerachb@clearpathrobotics.com">Chris Iverach-Brereton</author>
+  <author email="dniewinski@clearpathrobotics.com">Dave Niewinski</author>
 
   <license>BSD</license>
 
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>boxer_description</exec_depend>
+  <exec_depend>boxer_manipulation_description</exec_depend>
   <exec_depend>kinova_description</exec_depend>
 
   <export>
