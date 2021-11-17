@@ -20,6 +20,6 @@
 
   <param name="sample_duration" value="0.001"/>
 
-  <rosparam command="load" file="$(find boxer_gen3_moveit_config)/config/ompl_planning.yaml"/>
+  <rosparam command="load" file="$(find boxer_dual_gen3_moveit_config)/config/ompl_planning.yaml"/>
 
 </launch>
