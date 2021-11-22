@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+export BOXER_URDF_EXTRAS=$(catkin_find boxer_kinova_description urdf/boxer_dual_gen3_description.urdf.xacro --first-only)
