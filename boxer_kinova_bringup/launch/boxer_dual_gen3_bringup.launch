@@ -53,7 +53,7 @@
       <arg name="robot_name" default="$(arg left_robot_name)"/>
       <arg name="prefix" default="$(arg left_prefix)"/>
       <arg name="arm" default="$(arg left_arm)"/>
-      <arg name="dof" default="$(left_dof)"/>
+      <arg name="dof" default="$(arg left_dof)"/>
       <arg name="vision" default="true"/>
       <arg name="gripper" default="$(arg left_gripper)"/>
       <arg name="use_hard_limits" default="false"/>
@@ -72,7 +72,7 @@
       <arg name="robot_name" default="$(arg right_robot_name)"/>
       <arg name="prefix" default="$(arg right_prefix)"/>
       <arg name="arm" default="$(arg right_arm)"/>
-      <arg name="dof" default="$(right_dof)"/>
+      <arg name="dof" default="$(arg right_dof)"/>
       <arg name="vision" default="true"/>
       <arg name="gripper" default="$(arg right_gripper)"/>
       <arg name="use_hard_limits" default="false"/>
