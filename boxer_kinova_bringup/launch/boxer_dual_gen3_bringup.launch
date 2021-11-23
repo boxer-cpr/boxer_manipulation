@@ -94,7 +94,7 @@
 
     <!-- Relay the joint states from each arm -->
     <node name="$(arg left_arm)_joint_state_relay" pkg="topic_tools" type="relay"
-      args="$(left_arm)/base_feedback/joint_state /joint_states" />
+      args="$(arg left_arm)/base_feedback/joint_state /joint_states" />
     <node name="$(arg right_arm)_joint_state_relay" pkg="topic_tools" type="relay"
-      args="$(right_arm)/base_feedback/joint_state /joint_states" />
+      args="$(arg right_arm)/base_feedback/joint_state /joint_states" />
 </launch>
