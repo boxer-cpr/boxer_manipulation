@@ -4,8 +4,8 @@
     <arg name="use_hard_limits" default="false"/>
 
     <!-- LEFT ARM -->
-    <arg name="left_robot_name" default="left_kinova_arm"/>
-    <arg name="left_prefix" default="left_kinova_arm_"/>
+    <arg name="left_robot_name" default="left_arm"/>
+    <arg name="left_prefix" default="$(arg left_robot_name)_"/>
     <arg name="left_arm" default="gen3"/>
     <arg name="left_dof" default="7"/>
     <arg name="left_vision" default="true"/>
@@ -27,8 +27,8 @@
     <arg name="left_default_goal_tolerance" default="0.005"/> <!--radians-->
 
     <!-- RIGHT ARM -->
-    <arg name="right_robot_name" default="right_kinova_arm"/>
-    <arg name="right_prefix" default="right_kinova_arm_"/>
+    <arg name="right_robot_name" default="right_arm"/>
+    <arg name="right_prefix" default="$(arg right_robot_name)_"/>
     <arg name="right_arm" default="gen3"/>
     <arg name="right_dof" default="7"/>
     <arg name="right_vision" default="true"/>
@@ -51,6 +51,7 @@
 
     <!-- Start the left arm kortex_driver node -->
     <node name="$(arg left_robot_name)_driver" pkg="kortex_driver" type="kortex_arm_driver" output="screen" ns="$(arg left_robot_name)">
+        <param name="simulation" value="false" />
         <param name="ip_address" value="$(arg left_ip_address)"/>
         <param name="username" value="$(arg left_username)"/>
         <param name="password" value="$(arg left_password)"/>
@@ -70,6 +71,7 @@
     </node>
     <!-- Start the right arm kortex_driver node -->
     <node name="$(arg right_robot_name)_driver" pkg="kortex_driver" type="kortex_arm_driver" output="screen" ns="$(arg right_robot_name)">
+        <param name="simulation" value="false" />
         <param name="ip_address" value="$(arg right_ip_address)"/>
         <param name="username" value="$(arg right_username)"/>
         <param name="password" value="$(arg right_password)"/>
