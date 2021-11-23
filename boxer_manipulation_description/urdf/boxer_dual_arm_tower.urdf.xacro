@@ -4,7 +4,9 @@
   <xacro:macro name="boxer_dual_arm_tower" params="prefix parent *origin">
     <link name="${prefix}_base_link">
       <visual>
-        <material name="black" />
+        <material name="black">
+          <color rgba="0 0 0 1" />
+        </material>
         <geometry>
           <mesh filename="package://boxer_manipulation_description/meshes/dual_arm_tower.stl" scale="0.001 0.001 0.001" />
         </geometry>
