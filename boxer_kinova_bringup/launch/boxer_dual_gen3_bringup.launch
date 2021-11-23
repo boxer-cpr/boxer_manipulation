@@ -49,7 +49,7 @@
     <arg name="right_default_goal_time_tolerance" default="0.5"/> <!--seconds-->
     <arg name="right_default_goal_tolerance" default="0.005"/> <!--radians-->
 
-    <include filename="$(find boxer_kinova_bringup)/launch/boxer_gen3_bringup.launch">
+    <include file="$(find boxer_kinova_bringup)/launch/boxer_gen3_bringup.launch">
       <arg name="robot_name" default="$(arg left_robot_name)"/>
       <arg name="prefix" default="$(arg left_prefix)"/>
       <arg name="arm" default="$(arg left_arm)"/>
@@ -68,7 +68,7 @@
       <arg name="default_goal_tolerance" default="$(arg left_default_goal_tolerance)"/> <!--radians-->
     </include>
 
-    <include filename="$(find boxer_kinova_bringup)/launch/boxer_gen3_bringup.launch">
+    <include file="$(find boxer_kinova_bringup)/launch/boxer_gen3_bringup.launch">
       <arg name="robot_name" default="$(arg right_robot_name)"/>
       <arg name="prefix" default="$(arg right_prefix)"/>
       <arg name="arm" default="$(arg right_arm)"/>
