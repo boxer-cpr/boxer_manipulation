@@ -43,5 +43,5 @@
       <rosparam command="load" file="$(find kortex_description)/grippers/$(arg gripper)/config/joint_limits.yaml" unless="$(eval not arg('gripper'))" subst_value="true"/>
   </node>
 
-  <node name="$(robot_name)_joint_state_relay" type="relay" pkg="topic_tools" args="$(robot_name)/base_feedback/joint_state /joint_states" />
+  <node name="$(arg robot_name)_joint_state_relay" type="relay" pkg="topic_tools" args="$(arg robot_name)/base_feedback/joint_state /joint_states" />
 </launch>
