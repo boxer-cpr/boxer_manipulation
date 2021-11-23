@@ -93,8 +93,8 @@
     </node>
 
     <!-- Relay the joint states from each arm -->
-    <node name="$(arg left_arm)_joint_state_relay" pkg="topic_tools" type="relay"
-      args="$(arg left_arm)/base_feedback/joint_state /joint_states" />
-    <node name="$(arg right_arm)_joint_state_relay" pkg="topic_tools" type="relay"
-      args="$(arg right_arm)/base_feedback/joint_state /joint_states" />
+    <node name="$(arg left_robot_name)_joint_state_relay" pkg="topic_tools" type="relay"
+      args="$(arg left_robot_name)/base_feedback/joint_state /joint_states" />
+    <node name="$(arg right_robot_name)_joint_state_relay" pkg="topic_tools" type="relay"
+      args="$(arg right_robot_name)/base_feedback/joint_state /joint_states" />
 </launch>
